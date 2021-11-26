@@ -1,9 +1,12 @@
+// List of game signal
 const gameName = ['rock','paper',"scissors"];
 
+// Ramdom gameName selector
 const computerPlay = () => {
     return gameName[Math.floor(Math.random() * gameName.length)];
 }
 
+// Game function
 const playGame = (playerSelection = prompt().toLowerCase(), computerSelection = computerPlay()) => {
 
     if(playerSelection === 'rock' && computerSelection === 'paper') {
@@ -15,6 +18,7 @@ const playGame = (playerSelection = prompt().toLowerCase(), computerSelection = 
     }
 }
 
+// Playing game to save result and display to log
 const game = () => {
     for(let i = 0; i < 5; i++){
         let result = playGame();
